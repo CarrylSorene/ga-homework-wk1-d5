@@ -5,7 +5,14 @@ border: 1px solid black;
 border-collapse: collapse;
 }
 
-.row {
-  width: 10%;
+#wholeGrid {
   margin: 0 auto;
+}
+
+.row {
+  display: inline-block;
+}
+
+h1, h2 {
+  text-align: center;
 }
