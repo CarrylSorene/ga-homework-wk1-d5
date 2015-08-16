@@ -1,26 +1,69 @@
-//run function when a grid box is clicked - again how about grids b-i? loop through them?
+//run function when a grid box is clicked
 
 document.getElementById('a').addEventListener('click', function(e) { 
-  //e.preventDefault();
+  //e.preventDefault(); - needed for this?
 
-  var gridContents = ['', '', '', '', '', '', '', '', '']
+  var gridContents = ['', '', '', '', '', '', '', '', ''];
 
-//placeholders, though, they need to be a thing..?
+  var playerOne = 'x'
+  var playerTwo = 'o'
 
+  function alternateClicks(playerOne, playerTwo) 
+  {
   for (i = 0; i <= gridContents.length; i+2) {
-    return
-    var a = document.getElementById(‘a’).innerHTML = 'a'
-    var b = document.getElementById(‘b’).innerHTML = 'b'
-    var c = document.getElementById(‘c’).innerHTML = 'c'
-    var d = document.getElementById(‘d’).innerHTML = 'd'
-    var e = document.getElementById(‘e’).innerHTML = 'e'
-    var f = document.getElementById(‘f’).innerHTML = 'f'
-    var g = document.getElementById(‘g’).innerHTML = 'g'
-    var h = document.getElementById(‘h’).innerHTML = 'h'
-    var i = document.getElementById(‘i’).innerHTML = 'i'
+    
+    function printLetter(x, o) {
+      return (playerOne) || return (playerTwo);
+    }
+}
+
+document.getElementsByClassName(‘grid’).innerHTML = 'x'
+document.getElementsByClassName(‘grid’).innerHTML = 'o'
+
+// by className so either player can use any grid box
 
 //loop through these, depending on which is clicked, returning x or o to text in box
+  var clickNumber
 
+  switch (clickNumber){
+    case 1: 
+      = ''
+        break;
+    case 2: 
+      = ''
+        break;
+    case 3: 
+      = ''
+        break;
+    case 4: 
+      = ''
+        break;
+    case 5: 
+      = ''
+        break;
+    case 6: 
+      = ''
+        break;
+    case 7: 
+      = ''
+        break;
+    case 8: 
+      = ''
+        break;
+    case 9: 
+      = ''
+        break;
+    default:
+
+    var a = document.getElementById(‘a’).innerHTML = printLetter;
+    var b = document.getElementById(‘b’).innerHTML = printLetter;
+    var c = document.getElementById(‘c’).innerHTML = printLetter;
+    var d = document.getElementById(‘d’).innerHTML = printLetter;
+    var e = document.getElementById(‘e’).innerHTML = printLetter;
+    var f = document.getElementById(‘f’).innerHTML = printLetter;
+    var g = document.getElementById(‘g’).innerHTML = printLetter;
+    var h = document.getElementById(‘h’).innerHTML = printLetter;
+    var i = document.getElementById(‘i’).innerHTML = printLetter;
 
     //on the next go, alternating
             grid.Contents.push(i * 2);
@@ -58,14 +101,7 @@ winner = whoever matches toWin //?
 //decide winner
 //contents of row or column all o or all x ===
 
-           var toWin = [[a, b, c] 
-                        [d, e, f]
-                        [g, h, i]
-                        [a, d, g]
-                        [b, e, h]
-                        [c, f, i]
-                        [a, e, i]
-                        [c, e, g]];
+           
 
             if gridContents === toWin {
               return ("The winner is " + winner)
@@ -129,6 +165,15 @@ function allThree(player, cellOne, cellTwo, cellThree) {
 var winner = 
 
 //decide winner
+
+var toWin = [[a, b, c],
+             [d, e, f],
+             [g, h, i],
+             [a, d, g],
+             [b, e, h],
+             [c, f, i],
+             [a, e, i],
+             [c, e, g]]; //all === o or x
 
 alert("Game Over. Player" winner + "wins!")
 
