@@ -3,18 +3,24 @@
 document.getElementById('a').addEventListener('click', function(e) { 
   //e.preventDefault();
 
-  var gridContents = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+  var gridContents = ['', '', '', '', '', '', '', '', '']
+
+//placeholders, though, they need to be a thing..?
 
   for (i = 0; i <= gridContents.length; i+2) {
-    var a = document.getElementById(‘a’).value.innerHTML = 'a'
-    var b = document.getElementById(‘b’).value.innerHTML = 'b'
-    var c = document.getElementById(‘c’).value.innerHTML = 'c'
-    var d = document.getElementById(‘d’).value.innerHTML = 'd'
-    var e = document.getElementById(‘e’).value.innerHTML = 'e'
-    var f = document.getElementById(‘f’).value.innerHTML = 'f'
-    var g = document.getElementById(‘g’).value.innerHTML = 'g'
-    var h = document.getElementById(‘h’).value.innerHTML = 'h'
-    var i = document.getElementById(‘i’).value.innerHTML = 'i'
+    return
+    var a = document.getElementById(‘a’).innerHTML = 'a'
+    var b = document.getElementById(‘b’).innerHTML = 'b'
+    var c = document.getElementById(‘c’).innerHTML = 'c'
+    var d = document.getElementById(‘d’).innerHTML = 'd'
+    var e = document.getElementById(‘e’).innerHTML = 'e'
+    var f = document.getElementById(‘f’).innerHTML = 'f'
+    var g = document.getElementById(‘g’).innerHTML = 'g'
+    var h = document.getElementById(‘h’).innerHTML = 'h'
+    var i = document.getElementById(‘i’).innerHTML = 'i'
+
+//loop through these, depending on which is clicked, returning x or o to text in box
+
 
     //on the next go, alternating
             grid.Contents.push(i * 2);
