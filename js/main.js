@@ -1,18 +1,33 @@
-  //run function when a grid box is clicked - again how about grids b-i? !
+//run function when a grid box is clicked - again how about grids b-i? loop through them?
 
 document.getElementById('a').addEventListener('click', function(e) { 
-  e.preventDefault(); //?
-  
+  //e.preventDefault();
+
+  var gridContents = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+
+  for (i = 0; i <= gridContents.length; i+2) {
+    var a = document.getElementById(‘a’).value.innerHTML = 'a'
+    var b = document.getElementById(‘b’).value.innerHTML = 'b'
+    var c = document.getElementById(‘c’).value.innerHTML = 'c'
+    var d = document.getElementById(‘d’).value.innerHTML = 'd'
+    var e = document.getElementById(‘e’).value.innerHTML = 'e'
+    var f = document.getElementById(‘f’).value.innerHTML = 'f'
+    var g = document.getElementById(‘g’).value.innerHTML = 'g'
+    var h = document.getElementById(‘h’).value.innerHTML = 'h'
+    var i = document.getElementById(‘i’).value.innerHTML = 'i'
+
+    //on the next go, alternating
+            grid.Contents.push(i * 2);
   //display an x or an o in any of the 9 boxes
   
   //contents of board and also each click result, stored in array  - grid letters? need to replace grid letters(placeholders) for actual content - x and o
 
-    var gridContents = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+    
 
-      for (i = 1; i <= gridContents.length; i+2) {
-      grid.Contents.push(i * 2); //add result to the array for each click, keep doing that until grid is full
+       //add result to the array for each click, keep doing that until grid is full
 }
 
+    
 //see above, compare, doing same thing, add missing bits
 
   //keep track of moves - to indicate whether or not to draw an X or an O. - 
@@ -32,10 +47,10 @@ document.getElementById('a').addEventListener('click', function(e) {
 
 //need playerOne and playerTwo variable? or instead: a row, column or diagonal is full of x / full of o ?
 
+winner = whoever matches toWin //?
+
 //decide winner
 //contents of row or column all o or all x ===
-
-  if (( a,b,c === "x" ) || ( d,e,f === "x") || ( g,h,i === x))  {
 
            var toWin = [[a, b, c] 
                         [d, e, f]
@@ -45,6 +60,12 @@ document.getElementById('a').addEventListener('click', function(e) {
                         [c, f, i]
                         [a, e, i]
                         [c, e, g]];
+
+            if gridContents === toWin {
+              return ("The winner is " + winner)
+            }
+
+              (( a,b,c === "x" ) || ( d,e,f === "x") || ( g,h,i === x)) 
             //=== 'x' return win etc - where to put return "x" and return "o" ?
 };
 
