@@ -55,6 +55,8 @@ document.getElementsByClassName(‘grid’).innerHTML = 'o'
         break;
     default:
 
+    //actually not sure what to put before the =. maybe not the right idea, but it seemed neater that this:
+
     var a = document.getElementById(‘a’).innerHTML = printLetter;
     var b = document.getElementById(‘b’).innerHTML = printLetter;
     var c = document.getElementById(‘c’).innerHTML = printLetter;
@@ -64,23 +66,9 @@ document.getElementsByClassName(‘grid’).innerHTML = 'o'
     var g = document.getElementById(‘g’).innerHTML = printLetter;
     var h = document.getElementById(‘h’).innerHTML = printLetter;
     var i = document.getElementById(‘i’).innerHTML = printLetter;
-
-    //on the next go, alternating
-            grid.Contents.push(i * 2);
-  //display an x or an o in any of the 9 boxes
-  
-  //contents of board and also each click result, stored in array  - grid letters? need to replace grid letters(placeholders) for actual content - x and o
-
     
 
-       //add result to the array for each click, keep doing that until grid is full
-}
-
-    
-//see above, compare, doing same thing, add missing bits
-
-  //keep track of moves - to indicate whether or not to draw an X or an O. - 
-  // how do I vary (variable?) thing in brackets - need a-i depending on each click, not just a ? - loop through array?
+  //keep track of moves - to indicate whether or not to draw an X or an O.
 
   var move = getElementById('a').value; 
   document.getElementById('a').innerHTML = move;
@@ -92,25 +80,23 @@ document.getElementsByClassName(‘grid’).innerHTML = 'o'
 
 });
 
-//compare value of gridContents to the rows, columns and diagonals -> if statements
+// add to end of the right bit for adding result to the result-storing array:
+// grid.Contents.push(i * 2);
+// }
 
-//need playerOne and playerTwo variable? or instead: a row, column or diagonal is full of x / full of o ?
-
-winner = whoever matches toWin //?
+//winner = whoever matches toWin
 
 //decide winner
 //contents of row or column all o or all x ===
-
-           
 
             if gridContents === toWin {
               return ("The winner is " + winner)
             }
 
               (( a,b,c === "x" ) || ( d,e,f === "x") || ( g,h,i === x)) 
+              //haven't got this far to finish the code, it shouldn't be this long-winded?
             //=== 'x' return win etc - where to put return "x" and return "o" ?
 };
-
 
 //function to store result of move
 
@@ -125,38 +111,35 @@ a.addEventListener('click', function() { move(player, 'a'); }); //should it be m
 //array for looping through the clicks and storing results - needs to be every 3 and not 2?
 var array = [];
 
-
 //var gridContent = idValue e.g. value of a, b, c
 //so replace (“a”) in gridContent array for the value in the grid box
 
-do it with getElementById, though, or just need the variable name for this bit 
+//example from WDI Fundamentals - going to adapt it when all variables declared:
 
-declare cells, cellOne, Two, Three
+// function winnerIs(player) {
+//   return winsRow(player) || winsColumn(player) || winsDiagonal(player);
+// }
 
-function winnerIs(player) {
-  return winsRow(player) || winsColumn(player) || winsDiagonal(player);
-}
+// function winsRow(player) {
+//   return allThree(player, cells('a'), cells('b'), cells('c')) ||
+//          allThree(player, cells('d'), cells('e'), cells('f')) ||
+//          allThree(player, cells('g'), cells('h'), cells('i'));
+// }
 
-function winsRow(player) {
-  return allThree(player, cells('a'), cells('b'), cells('c')) ||
-         allThree(player, cells('d'), cells('e'), cells('f')) ||
-         allThree(player, cells('g'), cells('h'), cells('i'));
-}
+// function winsColumn(player) {
+//   return allThree(player, cells('a'), cells('d'), cells('g')) ||
+//          allThree(player, cells('b'), cells('e'), cells('h')) ||
+//          allThree(player, cells('c'), cells('f'), cells('i'));
+// }
 
-function winsColumn(player) {
-  return allThree(player, cells('a'), cells('d'), cells('g')) ||
-         allThree(player, cells('b'), cells('e'), cells('h')) ||
-         allThree(player, cells('c'), cells('f'), cells('i'));
-}
+// function winsDiagonal(player) {
+//   return allThree(player, cells('a'), cells('e'), cells('i')) ||
+//          allThree(player, cells('c'), cells('e'), cells('g'));
+// }
 
-function winsDiagonal(player) {
-  return allThree(player, cells('a'), cells('e'), cells('i')) ||
-         allThree(player, cells('c'), cells('e'), cells('g'));
-}
-
-function allThree(player, cellOne, cellTwo, cellThree) {
-  return (cellOne === player) && (cellTwo === player) && (cellThree === player);
-}
+// function allThree(player, cellOne, cellTwo, cellThree) {
+//   return (cellOne === player) && (cellTwo === player) && (cellThree === player);
+// }
 
 //returning winner
 
@@ -194,10 +177,10 @@ varName= toWin[1] //row d-f - other rows and columns have other indices in the a
       for(var i = 0; i < toWin.length; i++)
         if .getElementById('grid') === toWin
           return ('The winner is' winner)
-        //eg for(var a = 0; a < winningCombinations.length; a++){
+        //example from Stack Overflow:
+        // for(var a = 0; a < winningCombinations.length; a++){
         //   if(content[winningCombinations[a][0]]==symbol&&content[winningCombinations[a][1]]== symbol&&content[winningCombinations[a][2]]==symbol){
-
-var symbol = ‘x’ || ‘o’
+        //var symbol = ‘x’ || ‘o’
 
 //display winner
 
@@ -210,5 +193,3 @@ function displayWinner() {
     }
     return ("It's a tie"); //in a box onscreen
   }
-
-//class of grid or each id letter? - need to loop through to change!
